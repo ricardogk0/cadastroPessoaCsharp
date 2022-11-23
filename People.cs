@@ -21,38 +21,6 @@ namespace Cadastro
             Email = email;
         }
 
-        public static void CadastrarPessoa()
-        {
-            People pessoa;
-
-            int op = 0;
-
-            do
-            {
-                Console.Write("Nome: ");
-                string nome = Console.ReadLine();
-                Console.Write("CPF: ");
-                string cpf = Console.ReadLine();
-                Console.Write("Telefone: ");
-                string tel = Console.ReadLine();
-                Console.Write("Email: ");
-                string email = Console.ReadLine();
-
-                pessoa = new People(nome, cpf, tel, email);
-
-                Console.WriteLine("Deseja incluir um novo cadastro? (1 para sim)");
-                op = int.Parse(Console.ReadLine());
-
-            } while (op == 1);
-        }
-
-        public static string PesquisarPessoa(string nome)
-        {
-            People pessoa;
-
-            Console.WriteLine(pessoa.Name);
-        }
-
         public override string ToString()
         {
             return "Nome: " + Name + "\n\r" +
